@@ -1,14 +1,25 @@
-BDESK PHOTO
-============
+mp_tinymce_insertpicture
+========================
 
-Bdesk Photo is a tinymce plugin for BuddyexpressDesk to allow administrator to embed image in post as a base64 encode image.
+A plugin for TinyMCE 4 to insert images as Base64 inline with the text.
 
-There are some restrictions in plugin like:
- 1. The image must be equal to or less then 500KB
- 2. The image must be equal to or less then 800x800 in dimensions.
+Features:
+ - File size limit (1 mebibyte, can easily be changed).
+ - Image size limit (800x600, can easily be changed).
+  - Images above the limit are resized.
+ - Previews the selected image.
+ - Works entirely in JavaScript, no server backend required.
 
-Note: If you want to remove restriction replace plugin.min.js with the code found here https://gist.github.com/arsalanshah/10623688
+Requires HTML5.
 
-Last Edit README.md : Leonard Walter
+Forked from https://github.com/buddyexpress/bdesk_photo.git. Main differences:
+ - Previews the selected image.
+ - Validates the image upon file selection instead of after confirmation.
+ - Resizes the image if necessary.
 
-COPYRIGHT 2014 Informatikon Technologies informatikon.com
+Improvement opportunities:
+ - No i18n support -- messages are in English, need to be changed in the code for other languages.
+ - The same Canvas is currently used for preview and for resizing.
+ - Settings (maximum file and image sizes) should be configured by the client.
+ 
+Developed for Ministério Público do Rio Grande do Sul (http://mprs.mp.br).
